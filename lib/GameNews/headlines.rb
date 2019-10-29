@@ -1,2 +1,0 @@
-class GameNews::Headlines
-end

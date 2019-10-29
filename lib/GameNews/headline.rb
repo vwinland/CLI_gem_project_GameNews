@@ -1,4 +1,4 @@
-class GameNews::Scraper
+class GameNews::Headline
     attr_accessor :name, :author, :summary, :url
 
     def self.today

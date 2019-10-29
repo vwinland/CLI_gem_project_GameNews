@@ -1,7 +1,6 @@
 require_relative "GameNews/version"
 require_relative "GameNews/cli"
-require_relative "GameNews/scraper"
-require_relative "GameNews/headlines"
+require_relative "GameNews/headline"
 require 'pry'
 require 'open-uri'
 require 'nokogiri'
