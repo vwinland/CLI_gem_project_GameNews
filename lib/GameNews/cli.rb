@@ -16,24 +16,25 @@ class GameNews::CLI
     end
 
     def menu 
-        input = nil
+       input = nil
        while input != "exit"
             puts ""
-            puts "Enter the number of the story you'd like more info on, type list to see ta list of top headlines, or type exit:"
+            puts "Enter the number of the story you'd like more info on,. Type 'list' to see to list of top headlines, or type exit:"
             input = gets.strip.downcase
-
-            if input.to_i > 0
-                the_headline = GameNews::Headline.all[input.to_i-1]
-                puts "#{the_headline.name} - #{the_headline.author}: #{the_headline.summary} "
-            elsif input == "list"
-                list_stories
-            elsif
+      
+       if input.to_i < 5 && input.to_i > 0 
+            the_headline = GameNews::Headline.all[input.to_i-1]
+            puts "#{the_headline.name} - #{the_headline.author}: #{the_headline.summary} "
+        elsif input == "list"
+            GameNews::Headline.all.clear
+            list_stories
+        else
                 puts "Not sure what you want, type list or exit."
             end
         end
     end
 
-    def exit 
-      puts "Check back tomorrow for more videogame news!"
+    def exit
+     puts "Check back tomorrow for more videogame news!"      
     end
 end

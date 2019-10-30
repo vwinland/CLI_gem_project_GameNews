@@ -17,7 +17,7 @@ class GameNews::Scraper
                   headline = GameNews::Headline.new
                       headline.name = title.css('h6').text.strip
                       headline_author = doc.css('.content-meta__byline').each do |author|
-                          headline.author = author.css('.item-author').text.strip
+                      headline.author = author.css('.item-author').text.strip
                           end
                   #binding.pry
                   end
