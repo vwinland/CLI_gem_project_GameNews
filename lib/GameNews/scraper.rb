@@ -9,7 +9,8 @@ class GameNews::Scraper
                       headline.name = title.css('h6').text.strip 
                       headline.feature = title.css('h3').text.strip
                       headline.author = title.css('.item-author').text.strip
-                      headline.url = title.css(".content-meta__headline__wrapper a").first.attribute('href').value
+                      headline.url = title.css(".content-meta__headline__wrapper a").attribute('href').value
+                      headline.summary = title.css(".content-meta__storyType").text.strip 
             end
          end
       end
