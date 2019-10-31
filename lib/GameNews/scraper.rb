@@ -6,9 +6,10 @@ class GameNews::Scraper
           kotaku_headline = doc.search('.content-wrapper').each do |title| 
                   headline = GameNews::Headline.new
                   
-                      headline.name = title.css('h6').text.strip
+                      headline.name = title.css('h6').text.strip 
+                      headline.feature = title.css('h3').text.strip
                       headline.author = title.css('.item-author').text.strip
-                      headline.url = title.css(".content-meta__headline__wrapper a").attribute('href').value
+                      headline.url = title.css(".content-meta__headline__wrapper a").first.attribute('href').value
             end
          end
       end

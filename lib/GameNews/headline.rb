@@ -1,5 +1,5 @@
 class GameNews::Headline
-    attr_accessor :name, :author, :summary, :url
+    attr_accessor :name, :author, :summary, :url, :feature
 
     @@all = [] 
 

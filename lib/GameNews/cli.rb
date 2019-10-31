@@ -11,7 +11,7 @@ class GameNews::CLI
         GameNews::Scraper.scrape_kotaku
         GameNews::Headline.all.each.with_index(1) do |headline, i|
         
-            puts "#{i}. #{headline.name} - #{headline.author}: #{headline.url} "
+            puts "#{i}. #{headline.name} #{headline.feature}- #{headline.author}: #{headline.url} "
         end
     end
 
