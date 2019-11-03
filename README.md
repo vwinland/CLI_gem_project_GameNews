@@ -1,8 +1,6 @@
 # GameNews
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/GameNews`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to the Game News Game! The gem that will get you the top headlines provided to you each day from Kotaku.com. 
+ This application scrapes the top story headlines from Kotaku.com. Kotaku is a website for video game reviews, news, tips, and a source for other gaming related media. I designed my application to begin by display a list of all the top headlines on Kotaku’s homepage along with the author and url. The application then asks the user to input the number of the headline that they would like more information about. The next level of the CLI will then display the headline, author, url and story type that corresponds to the user’s choice. 
 
 ## Installation
 
