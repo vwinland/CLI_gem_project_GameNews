@@ -24,7 +24,8 @@ class GameNews::CLI
        if input.to_i  <= GameNews::Headline.all.count() && input.to_i > 0 
             the_headline = GameNews::Headline.all[input.to_i-1] 
             puts "\n ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-            puts "#{the_headline.name} #{the_headline.feature} #{the_headline.feature_3} #{the_headline.feature_2} by #{the_headline.author} \n Story Type:  #{the_headline.story_type} "
+            puts "#{the_headline.name} #{the_headline.feature} #{the_headline.feature_3} #{the_headline.feature_2} by #{the_headline.author} \n Story Type:  #{the_headline.story_type} \n If the 'Story Type' is blank it means that Kotaku changed their front page again and took this feature away. Sorry about that!"
+            puts " Check out this link for more info: #{the_headline.url}"
         elsif input == "list"
             GameNews::Headline.all.clear
             list_stories
