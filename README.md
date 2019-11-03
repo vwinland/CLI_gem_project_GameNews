@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+After the top videogame news headlines are displayed, the user will be prompted to choose which story they'd like more info on. The user must type in the number which corresponds to the headline of their choosing. After input is given, the application will display more information about the user's choice. Users are able to type "list" to view the full list of headlines again, or type "exit" to exit the program. 
 
 ## Development
 
