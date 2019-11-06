@@ -11,8 +11,19 @@ class GameNews::Scraper
                       headline.feature_2 = title.css('h1').text.strip
                       headline.feature_3 = title.css('h4').text.strip
                       headline.author = title.css('.item-author').text.strip
-                      headline.url = title.css(".content-meta__headline__wrapper a").attribute('href').value
+                      headline.url = title.css(".content-meta__headline a")[0].attribute('href').value
                       headline.story_type = title.css(".content-meta__storyType").text.strip 
             end
          end
+
+         def self.scrape_kotaku_details(k)
+            
+            doc = Nokogiri::HTML(open(k.url).read)
+            
+            k.story = doc.css(".js_expandable-container p").text.strip
+
+         end
+
+            
+
       end

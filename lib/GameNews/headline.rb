@@ -1,5 +1,5 @@
 class GameNews::Headline
-    attr_accessor :name, :author, :story_type, :url, :feature, :feature_2, :feature_3
+    attr_accessor :name, :author, :story_type, :url, :feature, :feature_2, :feature_3, :story
 
     @@all = [] 
 
@@ -10,4 +10,5 @@ class GameNews::Headline
     def self.all 
         @@all 
     end
+
 end
